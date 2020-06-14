@@ -1,4 +1,7 @@
 function averageDate(dateArray){
+  if(dateArray.length===0){
+    return null;
+  }
 let unixTimeStampArray=dateArray.map((e)=>e.getTime());
 return timeConverter(average(unixTimeStampArray));
 }
@@ -11,7 +14,8 @@ function timeConverter(UNIX_timestamp){
 console.log(averageDate([
   new Date(Date.UTC(1970, 0, 1)),
   new Date(Date.UTC(1971, 0, 1))
-]))
+]));
+console.log(averageDate([]));
 // Create a function that given an array of dates returns the average date in string form.
 
 // Examples
